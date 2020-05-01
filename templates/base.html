@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" href="{{url_for('static', filename='img/logo.jpg')}}" type="image/jpg" />
+        <meta charset="utf-8" />
+    </head>
+ 
+    <body>
+        <div id="page-wrapper">
+            <section id="header" class="wrapper">   
+                <div class="logo">
+                    <a href="/"><img src="{{url_for('static', filename='img/banner.jpg')}}" alt="Foto banner" /></a>
+                 </div>         
+            </section>
+        </div>
+        <section id="intro" class="wrapper style1">
+        </section>
+        {% block content %}{% endblock %}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>

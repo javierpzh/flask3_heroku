@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Juegos{% endblock %}
+{% block content %}
+    <h1>Juegos</h1>
+	    <form action="/listajuegos" method="post">
+		<p>
+		Juego a buscar: <input type="search" name="search_control" />
+		<br />
+		<input type="submit" value="Buscar" />
+
+		</p>
+
+		</form>
+{% endblock %}
