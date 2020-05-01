@@ -1,40 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-        <link rel="icon" href="{{url_for('static', filename='img/logo.jpg')}}" type="image/jpg" />
-        <meta charset="utf-8" />
-    </head>
- 
-    <body>
-        <div id="page-wrapper">
-            <section id="header" class="wrapper">   
-                <div class="logo">
-                    <a href="/"><img src="{{url_for('static', filename='img/banner.jpg')}}" alt="Foto banner" /></a>
-                 </div>         
-            </section>
-        </div>
-        <section id="intro" class="wrapper style1">
-        </section>
-        {% block content %}{% endblock %}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+<html lang="es" dir="ltr">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+	</head>
+	<body class="is-preload">
 
-    </body>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a class="image avatar"><img src="{{url_for('static', filename='images/mifoto.jpg')}}" alt="Mi foto" /></a>
+                    <h1><strong>Javier Pérez Hidalgo</strong></h1>
+                    <h2><br />Estudiante de 1º ASIR en I.E.S. Gonzalo Nazareno</h2>
+                    <p>Me puedes encontrar <a href="https://www.instagram.com/javierpzh/">aquí</a>.</p>
+				</div>
+			</header>
 
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							{% block titulo %}{% endblock %}
+                            {% block contenido %}{% endblock %}
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Acerca de nosotros</h2>
+						<p>A continuación dispone de un formulario para ponerse en contacto con nosotros.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nombre" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Mensaje" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Enviar" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										Dos Hermanas<br />
+										Sevilla<br />
+										España
+									</li>
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										612345678
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="#">javierperezhidalgo01@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://twitter.com/jperezhid_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/javierpzh" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.instagram.com/javierpzh/" class="icon brands fa-instagram"><span class="label">Dribbble</span></a></li>
+						<li><a href="" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
