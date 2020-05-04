@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Juegos{% endblock %}
-{% block content %}
+{% block titulo %}
+        <h1>JUEGOS MSX</h1>
+        <p></p>
+{% endblock %}
+{% block contenido %}
     <h1>Juegos</h1>
-	    <form action="/listajuegos" method="post">
+	<form id="request" class="main_form" action="/listajuegos" method="POST">
 		<p>
-		Juego a buscar: <input type="search" name="search_control" />
-		<br />
-		<input type="submit" value="Buscar" />
-
+			Juego a buscar: <input type="search" name="search_control" />
+			<br /><br />
+			<input type="submit" value="Buscar" />
 		</p>
-
-		</form>
+	</form>
 {% endblock %}
